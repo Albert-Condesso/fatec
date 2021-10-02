@@ -1,0 +1,80 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace prova_02
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void ck_Adicao_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ck_Subt_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ck_Multip_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ck_Divisao_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bt_Calc_Click(object sender, EventArgs e)
+        {
+            if (ck_Adicao.Checked)
+            {
+                double valor1 = Convert.ToDouble(textBox1.Text);
+                double valor2 = Convert.ToDouble(textBox2.Text);
+                double resultado = valor1 + valor2;
+                Resultado.Text = resultado.ToString();
+            }
+            if (ck_Subt.Checked)
+            {
+                double valor1 = Convert.ToDouble(textBox1.Text);
+                double valor2 = Convert.ToDouble(textBox2.Text);
+                double resultado = valor1 - valor2;
+                Resultado.Text = resultado.ToString();
+            }
+            if (ck_Multip.Checked)
+            {
+                double valor1 = Convert.ToDouble(textBox1.Text);
+                double valor2 = Convert.ToDouble(textBox2.Text);
+                double resultado = valor1 * valor2;
+                Resultado.Text = resultado.ToString();
+            }
+            if (ck_Divisao.Checked)
+            {
+                double valor1 = Convert.ToDouble(textBox1.Text);
+                double valor2 = Convert.ToDouble(textBox2.Text);
+                double resultado = valor1 / valor2;
+                Resultado.Text = resultado.ToString();
+            }
+            ck_Adicao.Checked = false;
+            ck_Subt.Checked = false;
+            ck_Multip.Checked = false;
+            ck_Divisao.Checked = false;
+
+            textBox1.Text = "";
+            textBox2.Text = "";
+        }
+
+    }
+}
